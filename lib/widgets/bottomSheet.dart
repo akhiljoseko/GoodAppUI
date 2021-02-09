@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Bbsheet extends StatelessWidget {
+class Bottomsheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return 
         Container(
           color: Color(0xFF737373),
-          height: 365,
+          height: 200,
                   child: Container(margin: EdgeInsets.symmetric(horizontal:10),
                 
                 decoration: BoxDecoration(

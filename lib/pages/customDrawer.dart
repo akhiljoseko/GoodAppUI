@@ -11,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-              Image.asset('assets/imgdrawer.png', width: 180),
+              Image.asset('assets/imgdrawer.png'),
               Padding(
                 padding: EdgeInsets.only(bottom: 5),
               ),
@@ -95,7 +95,7 @@ class CustomDrawer extends StatelessWidget {
             title: 'Email us',
           ),
            DrawerItems(
-            icon: Icons.question_answer_rounded,
+            icon: Icons.contact_support_rounded,
             title: 'Feedback',
           ),
           DrawerText(

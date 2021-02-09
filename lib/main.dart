@@ -1,11 +1,19 @@
-import 'package:GoodApp/splashScreen.dart';
+import 'package:GoodApp/pages/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  
-  runApp( 
-    MaterialApp(
-       debugShowCheckedModeBanner: false,
-       home:Splashscreen(),));
+  runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context,constraints){
+        return MaterialApp(
+          home: Home()
+        );
+      }
+    );
+  }
+}
