@@ -9,15 +9,17 @@ class CustomDrawer extends StatelessWidget {
       child: Drawer(
         child: ListView(padding: EdgeInsets.all(15), 
         children: [SizedBox( width: double.infinity,
-            height: height*0.18,
+           
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-              Image.asset('assets/imgdrawer.png'),
-              Padding(
-                padding: EdgeInsets.only(bottom:height*0.010 ),
+              Image.asset('assets/imgdrawer.png',
+              width: width*.3,
               ),
-              Text('  Stay Happy, Healthy and Productive'),
+              Padding(
+                padding: EdgeInsets.only(bottom:height*0.02,top: height*0.010 ),
+              
+              child: Text('  Stay Happy, Healthy and Productive'),),
             ]),
           ),
           DrawerItems(

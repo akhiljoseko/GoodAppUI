@@ -1,4 +1,3 @@
-import 'package:GoodApp/pages/home.dart';
 import 'package:GoodApp/pages/splashScreen.dart';
 import 'package:flutter/material.dart';
 

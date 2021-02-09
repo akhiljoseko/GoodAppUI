@@ -3,10 +3,13 @@ import 'package:GoodApp/widgets/customBottomAppBar.dart';
 import 'package:GoodApp/widgets/customFAB.dart';
 import 'package:flutter/material.dart';
 import 'package:GoodApp/widgets/cardandlist.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 
 class GoodApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+        FlutterStatusbarcolor.setNavigationBarColor(Color.fromRGBO(55, 71, 79, 2));
+
     return Scaffold(
       drawer: CustomDrawer(),
       floatingActionButton: CustomFAB(),
@@ -35,7 +38,6 @@ class GoodappInside extends StatelessWidget {
                 iconSize: .01,
                 icon: const Icon(Icons.arrow_drop_up),
                 onPressed: () {},
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
               );
             },
           ),

@@ -2,6 +2,7 @@ import 'package:GoodApp/home/background.dart';
 import 'package:GoodApp/pages/customDrawer.dart';
 import 'package:GoodApp/widgets/customBottomAppBar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -9,6 +10,8 @@ class Home extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     final color = Color.fromRGBO(55, 71, 79, 2);
+        FlutterStatusbarcolor.setNavigationBarColor(Color.fromRGBO(55, 71, 79, 2));
+
     return Scaffold(
       drawer: CustomDrawer(),
       body: Stack(

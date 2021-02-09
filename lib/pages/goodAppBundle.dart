@@ -5,11 +5,13 @@ import 'package:GoodApp/widgets/customBottomAppBar.dart';
 import 'package:GoodApp/widgets/customFAB.dart';
 import 'package:GoodApp/widgets/promotionCard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 
 class GoodAppBundle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    FlutterStatusbarcolor.setNavigationBarColor(Color.fromRGBO(55, 71, 79, 2));
 
     return Scaffold(
       drawer: CustomDrawer(),
