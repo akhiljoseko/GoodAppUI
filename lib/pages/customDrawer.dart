@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final height=MediaQuery.of(context).size.height;
+    final width=MediaQuery.of(context).size.width;
     return SafeArea(
       child: Drawer(
         child: ListView(padding: EdgeInsets.all(15), 
         children: [SizedBox( width: double.infinity,
-            height: 80,
+            height: height*0.18,
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
               Image.asset('assets/imgdrawer.png'),
               Padding(
-                padding: EdgeInsets.only(bottom: 5),
+                padding: EdgeInsets.only(bottom:height*0.010 ),
               ),
               Text('  Stay Happy, Healthy and Productive'),
             ]),
