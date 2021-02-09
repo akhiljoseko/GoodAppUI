@@ -17,6 +17,8 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+
     return AppBar(
       leadingWidth: .01,
       leading: Builder(
@@ -51,7 +53,10 @@ class _CustomAppBarState extends State<CustomAppBar> {
           padding: EdgeInsets.only(left: 14),
         )
       ],
-      title: Text(widget.title),
+      title: Text(
+        widget.title,
+        style: TextStyle(fontSize: height * .03),
+      ),
     );
   }
 }
