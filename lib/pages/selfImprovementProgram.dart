@@ -29,33 +29,42 @@ class SelfImprovementProgram extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.center,
             // mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              CardOnBody(),
+              CardOnBody(
+                imgurl: "assets/men.png",
+                firstText:
+                    "Experts created bundless in collaboration with our users,so you can become a better version of yourself.",
+                secondText: "Self Improvement Program",
+                thirdText:
+                    "Bundle is a collection of tools as per your mood or time of the day. Use GoodApp at its most potential.",
+                buttonText: "SELECT",
+              ),
               Image.asset(
                 'assets/manwithplant.png',
                 width: width * .7,
               ),
               SizedBox(
-                width: width*.84,
+                width: width * .84,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: height*.015),
-                  child: Text('How it Works',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: height*.035
-                  ),),
+                  padding: EdgeInsets.symmetric(vertical: height * .015),
+                  child: Text(
+                    'How it Works',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: height * .035),
+                  ),
                 ),
               ),
               SizedBox(
-                width: width*.84,
-                child: Text("A self improvements program will give you one task idea per day.you are free to choose program as per yours needs and perform the task at your own place.",
-                style: TextStyle(
-                  color: Colors.grey[700],
-                  fontWeight: FontWeight.w600,
-                  fontSize: height*.025
-                ),),
+                width: width * .84,
+                child: Text(
+                  "A self improvements program will give you one task idea per day.you are free to choose program as per yours needs and perform the task at your own place.",
+                  style: TextStyle(
+                      color: Colors.grey[700],
+                      fontWeight: FontWeight.w600,
+                      fontSize: height * .025),
+                ),
               ),
               SizedBox(
-                height: height*.05,
+                height: height * .05,
               ),
             ]),
       )),
