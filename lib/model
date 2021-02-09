@@ -1,0 +1,60 @@
+        showModalBottomSheet(context: context, builder: (context){
+        return Container(
+          color: Color(0xFF737373),
+          height: 400,
+                  child: Container(margin: EdgeInsets.symmetric(horizontal:10),
+                
+                decoration: BoxDecoration(
+                  color: Theme.of(context).canvasColor,
+                  borderRadius: BorderRadius.only(topLeft: const Radius.circular(10),topRight: const Radius.circular(10)),
+                ),
+                   child: Column(
+                    children: [
+                    
+                    ListTile( leading: Icon(Icons.accessible_forward_rounded),
+                    title: Text("Today ToDo"),
+                    ),
+
+                    ListTile( leading: Icon(Icons.accessible_forward_rounded),
+                    title: Text("Daily Routine")),
+
+                    ListTile( leading: Icon(Icons.accessible_forward_rounded),
+                    title: Text("Write journal"),),
+                    
+                     ListTile( leading: Icon(Icons.accessible_forward_rounded),
+                    title: Text("Take a note"),),
+
+                     ListTile( leading: Icon(Icons.accessible_forward_rounded),
+                    title: Text("Mood Entry"),),
+
+                     ListTile( leading: Icon(Icons.accessible_forward_rounded),
+                    title: Text("Sleep Entry"),),
+
+                    ListTile( leading: Icon(Icons.more_vert_outlined),
+                    title: Text("More"),),
+                 
+              ],
+          ),
+
+          ),
+        );
+
+        }); //botton sheet and context closed
+               
+
+
+
+
+kathikaan 
+______________
+Positioned(top: 8,left: 160,
+                    child:
+                   Container(
+                decoration: BoxDecoration(
+                shape: BoxShape.circle, color: Colors.white12),
+                height: 50,
+                width: 50,
+                          ),
+                          ),
+                       
+                     
