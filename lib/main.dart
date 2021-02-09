@@ -1,4 +1,5 @@
 import 'package:GoodApp/pages/home.dart';
+import 'package:GoodApp/pages/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return LayoutBuilder(
       builder: (context,constraints){
         return MaterialApp(
-          home: Home()
+          home: Splashscreen()
         );
       }
     );

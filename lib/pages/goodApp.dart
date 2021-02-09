@@ -35,7 +35,6 @@ class GoodappInside extends StatelessWidget {
                 iconSize: .01,
                 icon: const Icon(Icons.arrow_drop_up),
                 onPressed: () {},
-                // { Scaffold.of(contextt).openDrawer(); },
                 tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
               );
             },
