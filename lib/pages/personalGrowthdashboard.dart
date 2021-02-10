@@ -31,7 +31,7 @@ class PersonalGrowthDashboard extends StatelessWidget {
 
       body: ListView(children: [
         DifferentCard(
-          height: height * .24,
+          cardHeight: height * .24,
           imgurl: 'assets/imgpgd1.png',
           titleText: Text('Today ToDo'),
           subTitleText: Row(
@@ -102,7 +102,7 @@ class PersonalGrowthDashboard extends StatelessWidget {
         ),
         CommonText(txt: 'This month finance summary'),
         DifferentCard(
-          height: height * .24,
+          cardHeight: height * .24,
           imgurl: 'assets/imgpgd2.png',
           titleText: Text(
             'Expense 0\nIncome 0\nNet 0',
@@ -117,7 +117,7 @@ class PersonalGrowthDashboard extends StatelessWidget {
         ),
         CommonText(txt: 'Self Improvement Program'),
         DifferentCard(
-          height: height * .18,
+          cardHeight: height * .18,
           imgurl: 'assets/manwithplant.png',
           titleText: Text(
             'Self\nImprovement\nProgram',
@@ -163,7 +163,7 @@ class CommonText extends StatelessWidget {
         '$txt',
         textAlign: TextAlign.start,
         style: TextStyle(
-          fontSize: 17,
+          fontSize: height*.025,
           color: clr,
         ),
       ),
@@ -185,18 +185,17 @@ class CommonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+        double height = MediaQuery.of(context).size.height;
 
     return Container(
-        height: height * .15,
+      
         alignment: Alignment.center,
         child: Card(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.circular(10)),
             child: ListTile(
               onTap: () {},
-              leading: Image.asset('$imgurl'),
+              leading: Image.asset('$imgurl',height: height*.1,),
               title: Text('$heading'),
               subtitle: Text('$subheading'),
             )));
@@ -211,25 +210,27 @@ class IcButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final clr = Color.fromRGBO(55, 71, 79, 2);
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
 
     return FlatButton(
       onPressed: () {},
       child: Container(
-          margin: EdgeInsets.only(left: 20, top: 12, bottom: 25),
-          padding: EdgeInsets.fromLTRB(0, 14, 0, 10),
+          margin: EdgeInsets.only(left: width*.05, top: height*.01, bottom: height*.02),
+          padding: EdgeInsets.symmetric(vertical: height*.025),
           child: Row(
             children: [
               Icon(
                 ic,
-                size: 18,
+                size: height*.034,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: EdgeInsets.only(left: width*.05),
               ),
               Text(
                 '$txt',
                 style: TextStyle(
-                    fontSize: 17, fontWeight: FontWeight.w400, color: clr),
+                    fontSize: height*.026, fontWeight: FontWeight.w400, color: clr),
               ),
             ],
           )),
@@ -238,24 +239,27 @@ class IcButton extends StatelessWidget {
 }
 
 class DifferentCard extends StatelessWidget {
-  final double height;
+  final double cardHeight;
   final String imgurl;
   final Widget titleText;
   final Widget subTitleText;
 
   const DifferentCard({
     Key key,
-    this.height,
+    this.cardHeight,
     this.imgurl,
     this.titleText,
     this.subTitleText,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return Container(
       width: double.infinity,
-      height: height,
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      height: cardHeight,
+      margin: EdgeInsets.symmetric(horizontal: width*.04, vertical: height*.02),
       child: Card(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusDirectional.circular(10)),
